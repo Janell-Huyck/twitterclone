@@ -3,11 +3,11 @@ To Do for the TwitterClone project:
 Apps:
 
 twitteruser
-    custom user model
+    {% comment %} custom user model
         display name
         username
         password
-        following - many to many -- models.ManyToManyField("self", symmetrical=False)
+        following - many to many -- models.ManyToManyField("self", symmetrical=False) {% endcomment %}
 
     home page view
         locked behind @login
@@ -37,8 +37,7 @@ twitteruser
             notification count per user - unviewed only
         tweet
         profile (see own profile page)
-
-
+    
 tweet
     tweet model
         author
@@ -66,9 +65,9 @@ notification
 
 
 authentification
-    login page
-    logout button
+    {% comment %} login page {% endcomment %}
+    {% comment %} logout button {% endcomment %} - part of menu_bar
     signup form
     signup page
-    login form 
-    logout form???
+    {% comment %} login form 
+    logout form??? {% endcomment %}

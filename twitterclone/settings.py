@@ -119,3 +119,10 @@ STATIC_URL = "/static/"
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "assets")]
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
+AUTH_USER_MODEL = "twitteruser.TwitterUser"
+
+LOGIN_URL = "/login_page/"
+LOGOUT_URL = "/logout/"
+LOGIN_REDIRECT_URL = "/home/"
+LOGOUT_REDIRECT_URL = "/login_page/"
+
