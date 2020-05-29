@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% comment %} {% include 'twitter_user_detail.html' %} {% endcomment %}
+    {% for notification in notifications %}
+        <p> {{notification.tweet_time}} </p>
+        <o> From: {{notification.author}} </p>
+        <p> Tweet: {{notification.text}} </p>
+
+    {% empty %}
+        <p>Sorry, it looks like there are no notifications</p>
+    {% endfor %}
+{% endblock %}

@@ -10,7 +10,7 @@ twitteruser
         following - many to many -- models.ManyToManyField("self", symmetrical=False) {% endcomment %}
 
     home page view
-        locked behind @login
+        {% comment %} locked behind @login {% endcomment %}
         shows all your tweets
         shows tweets of everyone you are following
             If your Player model looks like this:
@@ -32,42 +32,43 @@ twitteruser
         counts how many accounts the user is following
         follow/unfollow button
     menu bar:
-        home page
+        {% comment %} home page {% endcomment %}
         notifications
             notification count per user - unviewed only
-        tweet
-        profile (see own profile page)
+        {% comment %} tweet {% endcomment %}
+        {% comment %} profile (see own profile page) {% endcomment %}
     
 tweet
-    tweet model
+    {% comment %} tweet model
         author
         text
-        creation time
+        creation time {% endcomment %}
 
-    tweet detail page
-    make a tweet page
-    make a tweet form
-        custom saving to create a notification with @ - use regex
-        has a link to the author's profile page
-        has a direct link to that specific tweet
+    {% comment %} tweet detail page {% endcomment %}
+        {% comment %} has a link to the author's profile page {% endcomment %}
+        {% comment %} has a direct link to that specific tweet {% endcomment %}
+    {% comment %} make a tweet page {% endcomment %}
+    {% comment %} make a tweet form
+        custom saving to create a notification with @ - use regex {% endcomment %}
 
 notification
-    notification model
+    {% comment %} notification model
         victim - foreignkey because each notification will be to one person
         tweet id - foreignkey? because each tweet can @ several people
         viewed - boolean, default False
-        will need to map out the multiple foreign keys - wait for error and look up again.
+        will need to map out the multiple foreign keys - wait for error and look up again. {% endcomment %}
 
     button at top that lists how many notifications (see bootstrap for tags?)
-    notification page - shows all new notifications
-        once shown, these notifications are marked as viewed and don't show up again.
+    {% comment %} notification page - shows all new notifications
+        once shown, these notifications are marked as viewed and don't show up again. {% endcomment %}
 
+bugs:
+    {% comment %} @ notification doesn't work if the @ is the first character. {% endcomment %}
 
-
-authentification
+authentication
     {% comment %} login page {% endcomment %}
     {% comment %} logout button {% endcomment %} - part of menu_bar
-    signup form
-    signup page
+    {% comment %} signup form
+    signup page {% endcomment %}
     {% comment %} login form 
     logout form??? {% endcomment %}

@@ -8,12 +8,13 @@ class TwitterUserAdmin(UserAdmin):
         "username",
         "display_name",
     )
+    prepopulated_fields = {"slug": ("username",)}
     list_filter = (
         "username",
         "display_name",
     )
     fieldsets = (
-        (None, {"fields": ("username", "display_name", "following")}),
+        (None, {"fields": ("username", "display_name", "following", "slug")}),
         ("Permissions", {"fields": ("is_staff", "is_active")}),
     )
 

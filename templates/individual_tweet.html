@@ -1,0 +1,10 @@
+    <div column-sm">
+        <div class="card">
+            <h5 class="card-title">Tweet by: <a href="../users/{{tweet.author.slug}}/" %}>@{{tweet.author.username}}</h5>
+            <a href="../{{tweet.pk}}/"> <p>{{ tweet.tweet_time | date:"D M d Y" }} {{ tweet.tweet_time | time:"H:i" }} </p></a>
+            <div class="card-body">
+                <p>{{tweet.text}}</p>
+            </div>
+        </div>
+        <br>
+    </div>

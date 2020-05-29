@@ -5,6 +5,7 @@ from django.http import HttpResponseRedirect
 from authentication.forms import LoginForm
 from twitteruser.forms import TwitterUserForm
 from twitteruser.models import TwitterUser
+from django.template.defaultfilters import slugify
 
 
 def loginView(request):
@@ -45,6 +46,7 @@ def signupView(request):
                 username=data["username"],
                 password=data["password"],
                 display_name=data["display_name"],
+                slug=slugify(data["username"]),
             )
             new_user.set_password(raw_password=data["password"])
             new_user.save()

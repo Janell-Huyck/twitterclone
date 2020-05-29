@@ -1,5 +1,18 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <p> this is the index template </p>
+    <div class="container-fluid d-flex">
+        {% include 'user_detail_block.html' with profile_details=profile_details %}
+        <div class="container-fluid d-flex flex-column">
+            {% for tweet in tweets|dictsortreversed:"tweet_time" %}
+                    {% include 'individual_tweet.html' with tweet=tweet%}
+            {% empty %}
+                {% for tweet in tweets%}
+                    {% include 'individual_tweet.html' with tweet=tweet.tweet_id%}
+                {% empty %}
+                    <h2 class="card-text"> No tweets found.  :( </h2>
+                {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
 {% endblock %}
