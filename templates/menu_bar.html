@@ -3,22 +3,22 @@
             
                 {% comment %} Only shows if you're logged out {% endcomment %}
                 {% if not user.is_authenticated %}
-                    <a class="" href="{% url 'login'%}"> Log In </a>
-                    <a class="" href="{% url 'signup'%}"> Sign Up </a>
+                    <a style="margin-left:20px; margin-right: 20px" href="{% url 'login'%}"> Log In </a>
+                    <a style="margin-left:20px; margin-right: 20px" href="{% url 'signup'%}"> Sign Up </a>
 
                 {% endif %}
 
                 {% comment %} Only shows if you're logged in. {% endcomment %}
                 {% if user.is_authenticated %}
-                    <a class="" href="{% url 'home'%}" >Home </a>
-                    <a class="" href="{% url 'notifications'%}"> Notifications </a>
-                    <a class="" href="{% url 'new_tweet'%}"> Tweet </a>
-                    <a class="" href="{% url 'twitter_user_detail' slug=user.slug %}"> Profile </a>
-                    <a class="" href="{% url 'logout'%}"> Log Out </a>
+                    <a style="margin-left:20px; margin-right: 20px" href="{% url 'home'%}" >Home </a>
+                    <a style="margin-left:20px; margin-right: 20px" href="{% url 'notifications'%}"> Notifications </a>
+                    <a style="margin-left:20px; margin-right: 20px" href="{% url 'new_tweet'%}"> Tweet </a>
+                    <a style="margin-left:20px; margin-right: 20px" href="{% url 'twitter_user_details' slug=user.slug %}"> Profile </a>
+                    <a style="margin-left:20px; margin-right: 20px" href="{% url 'logout'%}"> Log Out </a>
 
 
 
-                    <div class="signedIn text-white">
+                    <div class="text-white" style="margin-left:40%">
                         Logged in as: {{user.username}}
                     </div>
                 {% endif %}

@@ -30,11 +30,11 @@ twitteruser
         shows all tweets from them
         counts how many tweets the user has written
         counts how many accounts the user is following
-        follow/unfollow button
+        {% comment %} follow/unfollow button
     menu bar:
         {% comment %} home page {% endcomment %}
         notifications
-            notification count per user - unviewed only
+            notification count per user - unviewed only {% endcomment %}
         {% comment %} tweet {% endcomment %}
         {% comment %} profile (see own profile page) {% endcomment %}
     
@@ -58,7 +58,7 @@ notification
         viewed - boolean, default False
         will need to map out the multiple foreign keys - wait for error and look up again. {% endcomment %}
 
-    button at top that lists how many notifications (see bootstrap for tags?)
+    {% comment %} button at top that lists how many notifications (see bootstrap for tags?) {% endcomment %}
     {% comment %} notification page - shows all new notifications
         once shown, these notifications are marked as viewed and don't show up again. {% endcomment %}
 
