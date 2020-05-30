@@ -1,0 +1,14 @@
+body {
+    display:flex;
+    flex-direction: column;
+    background: url('humans.jpg');
+    background-attachment: fixed;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer {
+    justify-self: flex-end;
+    align-self: flex-end;
+}
