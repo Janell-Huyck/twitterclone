@@ -22,6 +22,8 @@ def index(request):
         their_tweets = Tweet.objects.filter(author=followed_author)
         tweets.extend(their_tweets)
     context["tweets"] = tweets
+    user_notifications = Notification.objects.filter(victim=user, viewed=False).count()
+    context["user_notifications"] = user_notifications
     return render(request, "../templates/index.html", context)
 
 
