@@ -1,5 +1,5 @@
     <div column-sm">
-        <div class="card">
+        <div class="card p-2">
             <h5 class="card-title">Tweet by: <a href="{% url 'twitter_user_details' slug=tweet.author.slug %}">@{{tweet.author.username}}</h5>
             <a href="{% url 'tweet_detail' pk=tweet.pk %}"> <p>{{ tweet.tweet_time | date:"D M d Y" }} {{ tweet.tweet_time | time:"H:i" }} </p></a>
             <div class="card-body">
