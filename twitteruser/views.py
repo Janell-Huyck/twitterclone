@@ -54,7 +54,7 @@ def twitterUserDetail(request, slug):
         follow_button_class = "btn btn-danger"
     else:
         follow_url = "follow_user"
-        follow_text = "Follow_user"
+        follow_text = "Follow User"
         follow_button_class = "btn btn-primary"
     context["follow_url"] = follow_url
     context["follow_text"] = follow_text

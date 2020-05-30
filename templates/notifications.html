@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    {% comment %} {% include 'twitter_user_details.html' %} {% endcomment %}
     {% for notification in notifications %}
         <p> {{notification.tweet_time}} </p>
         <o> From: {{notification.author}} </p>
